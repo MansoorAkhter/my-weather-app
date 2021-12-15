@@ -48,16 +48,16 @@ function App() {
     <div className="App">
     <input type="text" name="cityName" value={cityInput} onChange={(e)=> setCityInput(e.target.value)}/>
 
-      <h3>country: {countryName}</h3>
+      <h3>Country: {countryName}</h3>
       <h3>City: {cityName}</h3>
       <h3>Current weather: {weather}</h3>
-      <h3>Current temp :{degree}</h3>
-      <h3>Wind speed: {windSpeed}</h3>
-      <h3>Real feel: {realFeel}</h3>
-      <h3>Min-temp: {minTemp}</h3>
-      <h3>Max-temp: {maxTemp}</h3>
-      <h3>Air asdasdpressure: {air}</h3>
-      <h3>Humidity: {humidity}</h3>
+      <h3>Current temp :{Math.round(degree)} degree</h3>
+      <h3>Wind speed: {Math.round(windSpeed)} km/h</h3>
+      <h3>Real feel: {Math.round(realFeel)} degree</h3>
+      <h3>Min-temp: {Math.round(minTemp)} degree</h3>
+      <h3>Max-temp: {Math.round(maxTemp)} degree</h3>
+      <h3>Air pressure: {air}</h3>
+      <h3>Humidity: {Math.round(humidity)}%</h3>
       {/* <h3>{location}</h3> */}
     </div>
   );
