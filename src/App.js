@@ -1,5 +1,5 @@
 import "./App.css";
-import { useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 
 function App() {
@@ -38,17 +38,19 @@ function App() {
         setair(completeResponse.main.pressure);
         sethumidity(completeResponse.main.humidity);
       });
-    
   }, [cityInput]);
-
-  
- 
 
   return (
     <div className="App">
-    <input type="text" name="cityName" value={cityInput} onChange={(e)=> setCityInput(e.target.value)}/>
-
       <h1>Earth Weather</h1>
+      
+      <input
+        type="text"
+        name="cityName"
+        value={cityInput}
+        onChange={(e) => setCityInput(e.target.value)}
+      />
+
       <h3>Country: {countryName}</h3>
       <h3>City: {cityName}</h3>
       <h3>Current weather: {weather}</h3>
